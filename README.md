@@ -1,15 +1,1 @@
-# Elysia with Bun runtime
-
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
-
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
-
-Open http://localhost:3000/ with your browser to see the result.
+# Sistema de Certificação de Habilidades ## 📋 Descrição Sistema de Certificação de Habilidades é uma API RESTful para gestão de certificações de habilidades. O sistema permite criar usuários, cadastrar habilidades e suas respectivas provas de certificação. Cada prova consiste em perguntas com múltiplas opções de resposta, e os usuários têm uma única tentativa para realizar cada certificação. ## 🚀 Funcionalidades - **Gerenciamento de Usuários**: Criação, autenticação e gestão de perfis de usuários - **Cadastro de Habilidades**: Criação e gerenciamento de habilidades certificáveis - **Provas de Certificação**: Criação de provas com perguntas e respostas para cada habilidade - **Realização de Provas**: Interface para usuários realizarem provas de certificação ## 🔧 Tecnologias - **Bun** - **Elysia** - **PostgreSQL** - **Prisma** - **Docker** ## ⚙️ Instalação e Configuração ### Pré-requisitos - Bun - PostgreSQL - Docker (opcional) ### Instalação 1. Clone o repositório: ```bash git clone https://github.com/tarrciodev/certification-test.git cd skill-certification ``` 2. Instale as dependências: ```bash bun install ``` 3. Configure as variáveis de ambiente: ```bash cp .env.example .env ``` Edite o arquivo `.env` com suas configurações. 4. Execute as migrações do banco de dados: ```bash bun prisma migrate dev ``` 5. Inicie o servidor: ```bash bun dev ``` ### Usando Docker ```bash docker-compose up -d ``` ## 📞 Contato - Email - [tarcisio.devmaster@gmail.com](mailto:tarcisio.devmaster@gmail.com) - LinkedIn - [Tarcísio Teixeira](https://www.linkedin.com/in/tarc%C3%ADsio-teixeira-55269b312/)
