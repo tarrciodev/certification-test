@@ -1,0 +1,20 @@
+{
+    "name": "certification-test",
+    "version": "1.0.50",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "bun run --watch src/server.ts",
+        "build": "bun install && pnx prisma generate && pnx prisma migrate deploy",
+        "start": "bun run src/server.ts"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.8.2",
+        "argon2": "^0.43.0",
+        "elysia": "latest"
+    },
+    "devDependencies": {
+        "bun-types": "latest",
+        "prisma": "^6.8.2"
+    },
+    "module": "src/index.js"
+}

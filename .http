@@ -1,0 +1,78 @@
+POST http://localhost:3333/users/create
+Content-Type: application/json
+
+{
+    "email": "tarcisio@gmail.com",
+    "password": "123456",
+    "name": "Tarcisio"
+}
+
+### 
+
+POST http://localhost:3333/skills/create
+Content-Type: application/json
+
+{
+    "name": "Javascript",
+    "description": "Javascript é uma linguagem de programação popular e de código aberto, que permite criar aplicativos dinâmicos e interativos usando JavaScript."
+}
+
+###
+
+POST http://localhost:3333/certification-test/create
+Content-Type: application/json
+
+{
+    "title": "Teste de certificação",
+    "description": "Descrição do teste",
+    "timeLimit": 10,
+    "passingScore": 70,
+    "skillId": "95e2aeb1-69a4-4dbc-aaf8-81ec5884cc9e"
+}
+
+###
+
+POST http://localhost:3333/certification-test/create-question/4022dda8-fd18-42ad-ba7f-91491c403ca5
+Content-Type: application/json
+
+{
+    "text": "Qual é o nome do primeiro personagem da saga A Song of Ice and Fire?",
+    "score": 1,
+    "certificationTestId": "95e2aeb1-69a4-4dbc-aaf8-81ec5884cc9e",
+    "alternatives": [
+        {
+            "text": "A Song of Ice and Fire",
+            "isCorrect": true
+        },
+        {
+            "text": "A Game of Thrones",
+            "isCorrect": false
+        },
+        {
+            "text": "A Storm of Swords",
+            "isCorrect": false
+        }
+    ]
+}
+
+###
+
+POST http://localhost:3333/certification-test/create-attemp
+Content-Type: application/json
+
+{
+    "certificationTestId": "4022dda8-fd18-42ad-ba7f-91491c403ca5",
+    "userId": "79d6e196-6cd6-4659-b147-bf4ee8bffe80"
+} 
+
+
+###
+
+POST http://localhost:3333/certification-test/create-answer/6419f5d2-b13f-4bd9-979c-dc97131d8d87
+Content-Type: application/json
+
+{
+    "questionId": "95e2aeb1-69a4-4dbc-aaf8-81ec5884cc9e",
+    "alternativeId": "95e2aeb1-69a4-4dbc-aaf8-81ec5884cc9e",
+    "testAttemptId": "95e2aeb1-69a4-4dbc-aaf8-81ec5884cc9e"
+}
